@@ -1,8 +1,26 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="Microsoft.TeamFoundationServer.ExtendedClient" Version="16.144.1-preview" NoWarn="NU1701" />
+    <PackageReference Include="Microsoft.VisualStudio.Services.Client" Version="16.144.1-preview" NoWarn="NU1701" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.TeamFoundation.Build.Client">
+      <HintPath>$(USERPROFILE)\.nuget\packages\microsoft.teamfoundationserver.extendedclient\16.144.1-preview\lib\net45\Microsoft.TeamFoundation.Build.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Client">
+      <HintPath>$(USERPROFILE)\.nuget\packages\microsoft.teamfoundationserver.extendedclient\16.144.1-preview\lib\net45\Microsoft.TeamFoundation.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common">
+      <HintPath>$(USERPROFILE)\.nuget\packages\microsoft.visualstudio.services.client\16.144.1-preview\lib\net45\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+    
 </Project>
